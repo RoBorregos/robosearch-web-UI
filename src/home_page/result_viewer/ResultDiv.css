@@ -1,0 +1,52 @@
+.result-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid gray 1px;
+  border-top: solid gray 1px;
+  padding: 5px 10px 5px 10px; 
+}
+
+.header-result-div {
+  margin-top: 15px;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+.user-repo-div {
+  float: left;
+  font-weight: 500;
+}
+
+.branch-span {
+  font-weight: normal;
+}
+
+.path-file-div {
+  display: inline;
+}
+
+.path-file-span {
+  cursor: pointer;
+}
+
+.github-link-div {
+  float: right;
+}
+
+.num-appearances-div {
+  margin-bottom: 15px;
+}
+
+.fragments-container-div {
+  padding: 5px;
+}
+
+.github-file-link:link, .github-file-link:visited, .github-file-link:hover,
+  .github-file-link:active{
+  color: unset;
+}
+
+.repository-link:link, .repository-link:visited, .repository-link:hover,
+  .repository-link:active{
+  color: unset;
+}
