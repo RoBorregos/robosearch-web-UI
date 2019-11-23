@@ -12,19 +12,14 @@ class RHomePage extends Component {
     super(props);
     this.onClickResultToOpenFile = this.onClickResultToOpenFile.bind(this);
 
-    const valuesFromURL = 
-      this.getValuesFromURL(new URL(window.location.href).searchParams);
-    const validQuery = checkQuery(valuesFromURL.query);
     /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}} */
     this.state = {
-      ...valuesFromURL,
-      errorInRequest: validQuery ? null : {error: "Invalid query", rateLimit: false},
+      query: "",
+      onlyRobo: true,
+      expSearch: false,
       queryResults: [],
+      errorInRequest: null,
     };
-
-    if (validQuery) {
-      this.getResultsOfSearch(this.state.query);
-    }
   }
 
   /**
@@ -40,6 +35,20 @@ class RHomePage extends Component {
     console.log("File at:" + url.toString());
 
     window.location.href = url.toString();
+  }
+
+  componentDidMount() {
+    const valuesFromURL = 
+      this.getValuesFromURL(new URL(window.location.href).searchParams);
+    const validQuery = checkQuery(valuesFromURL.query);
+    this.setState({
+      ...valuesFromURL,
+      errorInRequest: validQuery ? null : {error: "Invalid query", rateLimit: false},
+    });
+
+    if (validQuery) {
+      this.getResultsOfSearch(valuesFromURL.query);
+    }
   }
 
   render() {
