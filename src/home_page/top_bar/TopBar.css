@@ -1,7 +1,9 @@
 .top-bar-div {
   padding: 15px 20px 20px 20px;
   border-bottom: 2px solid gray;
+  box-sizing: border-box;
   background-color: #dce0e0;
+  height: 100%;
 }
 
 .name-div {

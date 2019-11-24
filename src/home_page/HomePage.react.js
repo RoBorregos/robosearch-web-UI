@@ -6,6 +6,8 @@ import RErrorNotice from './error_notice/ErrorNotice.react.js';
 import {requestResults, checkQuery} from './RequesterHelper.js';
 import {ResultStruct} from './ResultStruct.js';
 
+import './HomePage.css';
+
 class RHomePage extends Component {
   /** @param {!{}} props */
   constructor(props) {
@@ -63,13 +65,17 @@ class RHomePage extends Component {
       />;
 
     return (
-      <div>
-        <RTopBar 
-          query={this.state.query} 
-          onlyRoboRepos={this.state.onlyRobo} 
-          useExpSearch={this.state.expSearch} 
-        />
-        {bodyContent}
+      <div className={"homepage-div"}>
+        <div className={"homepage-top-div"}>
+          <RTopBar 
+            query={this.state.query} 
+            onlyRoboRepos={this.state.onlyRobo} 
+            useExpSearch={this.state.expSearch} 
+          />
+        </div>
+        <div className={"homepage-content-div"}>
+          {bodyContent}
+        </div>
       </div>
     );
   }
