@@ -4,6 +4,7 @@ import RResultViewer from './result_viewer/ResultViewer.react.js';
 import RTopBar from './top_bar/TopBar.react';
 import RErrorNotice from './error_notice/ErrorNotice.react.js';
 import {requestResults, checkQuery} from './RequesterHelper.js';
+import {Destinations, getDestinationFromURLParams} from './Redirecter.js';
 import {ResultStruct} from './ResultStruct.js';
 
 import './HomePage.css';
@@ -14,13 +15,14 @@ class RHomePage extends Component {
     super(props);
     this.onClickResultToOpenFile = this.onClickResultToOpenFile.bind(this);
 
-    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}} */
+    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, actualDestination: !string}} */
     this.state = {
       query: "",
       onlyRobo: true,
       expSearch: false,
       queryResults: [],
       errorInRequest: null,
+      actualDestination: Destinations.HOME,
     };
   }
 
@@ -40,29 +42,52 @@ class RHomePage extends Component {
   }
 
   componentDidMount() {
-    const valuesFromURL = 
-      this.getValuesFromURL(new URL(window.location.href).searchParams);
-    const validQuery = checkQuery(valuesFromURL.query);
+    // TODO: Move the logic specific to results toResultViewer.
+    const params = new URL(window.location.href).searchParams;
+
+    const valuesFromURL = this.getValuesFromURL(params);
+    const destination = getDestinationFromURLParams(params);
     this.setState({
-      ...valuesFromURL,
-      errorInRequest: validQuery ? null : {error: "Invalid query", rateLimit: false},
+      ...valuesFromURL, 
+      actualDestination: destination,
     });
 
-    if (validQuery) {
-      this.getResultsOfSearch(valuesFromURL.query);
+    if (destination === Destinations.RESULTS) {
+      const validQuery = checkQuery(valuesFromURL.query);
+      this.setState({
+        errorInRequest: validQuery ? null : {error: "Invalid query", rateLimit: false},
+      });
+
+      if (validQuery) {
+        this.getResultsOfSearch(valuesFromURL.query);
+      }
     }
   }
 
   render() {
-    const bodyContent = this.state.errorInRequest === null ?
-      <RResultViewer 
-        results={this.state.queryResults} 
-        onClickToOpenFile={this.onClickResultToOpenFile}
-      /> :
-      <RErrorNotice 
-        error={this.state.errorInRequest.error} 
-        rateLimit={this.state.errorInRequest.rateLimit} 
-      />;
+    let bodyContent;
+    switch(this.state.actualDestination) {
+      case Destinations.RESULTS: {
+        bodyContent = this.state.errorInRequest === null ?
+          <RResultViewer 
+            results={this.state.queryResults} 
+            onClickToOpenFile={this.onClickResultToOpenFile}
+          /> :
+          <RErrorNotice 
+            error={this.state.errorInRequest.error} 
+            rateLimit={this.state.errorInRequest.rateLimit} 
+          />;
+        console.log("Navigation= Results");
+        break;
+      }
+
+      // Destinations.FILE_VIEWER:
+      // Destinations.HOME: 
+      default: {
+        bodyContent = <div />;
+        console.log("Navigation= Home");
+      }
+    }
 
     return (
       <div className={"homepage-div"}>
