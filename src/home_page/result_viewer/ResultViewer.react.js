@@ -5,7 +5,7 @@ import RResultDiv from './ResultDiv.react.js';
 
 class RResultViewer extends Component {
   /**
-   * @param {!{results: Array<!ResultStruct>, onClickToOpenFile: function(string):undefined}} props
+   * @param {!{results: !Array<!ResultStruct>, onClickToOpenFile: !function(!string, !string, !string, !string):undefined}} props
    */
 	constructor(props) {
 		super(props);

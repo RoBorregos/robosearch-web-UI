@@ -28,16 +28,22 @@ class RHomePage extends Component {
 
   /**
    * @param {!string} apiUrlOfFile
+   * @param {!string} owner
+   * @param {!string} repo
+   * @param {!string} file
    */
-  onClickResultToOpenFile(apiUrlOfFile) {
+  onClickResultToOpenFile(apiUrlOfFile, owner, repo, file) {
     const url = new URL(window.location.origin + window.location.pathname);
-    // url.pathname = "file";
+
     url.searchParams.set("q", this.state.query);
     url.searchParams.set("robo", this.state.onlyRobo);
     url.searchParams.set("exp", this.state.expSearch);
+    url.searchParams.set("owner", owner);
+    url.searchParams.set("repo", repo);
+    url.searchParams.set("file", file);
     url.searchParams.set("file_url", apiUrlOfFile);
-    console.log("File at:" + url.toString());
 
+    console.log("File at:" + url.toString());
     window.location.href = url.toString();
   }
 
