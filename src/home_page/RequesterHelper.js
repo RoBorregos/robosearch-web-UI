@@ -105,7 +105,6 @@ function formatResults(jsonResult) {
     resultStruct.repositoryIsFork = file.repository.fork;
     resultStruct.repositoryIsPrivate = file.repository.private;
 
-    resultStruct.repositoryOwnerName = "";
     resultStruct.repositoryOwnerUser = file.repository.owner.login;
     resultStruct.repositoryOwnerUrl = file.repository.owner.html_url;
 

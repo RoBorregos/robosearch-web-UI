@@ -30,6 +30,7 @@ class ResultStruct {
     this.repositoryDescription = "";
     this.repositoryIsPrivate = false;
     this.repositoryIsFork = false;
+    // TODO: Look for how to get this.
     this.repositoryOwnerName = "";
     this.repositoryOwnerUser = "";
     this.repositoryOwnerUrl = "";
