@@ -59,7 +59,7 @@ class RHomePage extends Component {
       });
 
       if (validQuery) {
-        this.getResultsOfSearch(valuesFromURL.query);
+        this.getResultsOfSearch(valuesFromURL.query, valuesFromURL.onlyRobo);
       }
     }
   }
@@ -118,9 +118,13 @@ class RHomePage extends Component {
     return state;
   }
 
-  getResultsOfSearch(query) { 
+  /**
+   * @param {!string} query
+   * @param {!boolean} onlyRoboRepos 
+   */
+  getResultsOfSearch(query, onlyRoboRepos) { 
     if (query.replace(/\s/g, "").length > 0) {
-      requestResults(query, this.state.onlyRobo, (resposeObject) => {
+      requestResults(query, onlyRoboRepos, (resposeObject) => {
         console.log(resposeObject);
         if (resposeObject.error === null) {
           this.setState({
