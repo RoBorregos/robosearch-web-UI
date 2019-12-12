@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import RFileViewer from './file_viewer/FileViewer.react';
 import RResultViewer from './result_viewer/ResultViewer.react.js';
 import RTopBar from './top_bar/TopBar.react';
 import RErrorNotice from './error_notice/ErrorNotice.react.js';
@@ -15,13 +16,14 @@ class RHomePage extends Component {
     super(props);
     this.onClickResultToOpenFile = this.onClickResultToOpenFile.bind(this);
 
-    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, actualDestination: !string}} */
+    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, searchParams: ?URLSearchParams, actualDestination: !string}} */
     this.state = {
       query: "",
       onlyRobo: true,
       expSearch: false,
       queryResults: [],
       errorInRequest: null,
+      searchParams: null,
       actualDestination: Destinations.HOME,
     };
   }
@@ -56,6 +58,7 @@ class RHomePage extends Component {
     this.setState({
       ...valuesFromURL, 
       actualDestination: destination,
+      searchParams: params,
     });
 
     if (destination === Destinations.RESULTS) {
@@ -87,8 +90,14 @@ class RHomePage extends Component {
         break;
       }
 
-      // Destinations.FILE_VIEWER:
-      // Destinations.HOME: 
+      case Destinations.FILE_VIEWER: {
+        console.assert(this.state.searchParams !== null);
+        bodyContent = <RFileViewer searchParams={this.state.searchParams} />;
+        console.log("Navigation= File viewer");
+        break;
+      }
+
+      // Destinations.HOME
       default: {
         bodyContent = <div />;
         console.log("Navigation= Home");
