@@ -10,21 +10,29 @@ import {ResultStruct} from './ResultStruct.js';
 
 import './HomePage.css';
 
+/**
+ * Note: This component does NOT update on props changes. It forever uses the first props
+ * passed. At the beginning was because it was meant to be called only once each page load.
+ * Now, is also because `RResultViewer`'s default-props.
+ * 
+ * TODO: When the migration of the ResulViewer to its file finishes, change this to make
+ * render correctly depend on props. Maybe using `getDerivedStateFromProps()` to make 
+ * it cleaner.
+ */
 class RHomePage extends Component {
-  /** @param {!{}} props */
+  /** @param {!{urlParams: !URLSearchParams}} props */
   constructor(props) {
     super(props);
     this.onClickResultToOpenFile = this.onClickResultToOpenFile.bind(this);
 
-    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, searchParams: ?URLSearchParams, actualDestination: !string}} */
+    const valuesFromURL = this.getValuesFromURL(this.props.urlParams);
+    const destination = getDestinationFromURLParams(this.props.urlParams);
+    /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, actualDestination: !string}} */
     this.state = {
-      query: "",
-      onlyRobo: true,
-      expSearch: false,
+      ...valuesFromURL,
       queryResults: [],
       errorInRequest: null,
-      searchParams: null,
-      actualDestination: Destinations.HOME,
+      actualDestination: destination,
     };
   }
 
@@ -51,24 +59,14 @@ class RHomePage extends Component {
 
   componentDidMount() {
     // TODO: Move the logic specific to results toResultViewer.
-    const params = new URL(window.location.href).searchParams;
-
-    const valuesFromURL = this.getValuesFromURL(params);
-    const destination = getDestinationFromURLParams(params);
-    this.setState({
-      ...valuesFromURL, 
-      actualDestination: destination,
-      searchParams: params,
-    });
-
-    if (destination === Destinations.RESULTS) {
-      const validQuery = checkQuery(valuesFromURL.query);
+    if (this.state.actualDestination === Destinations.RESULTS) {
+      const validQuery = checkQuery(this.state.query);
       this.setState({
         errorInRequest: validQuery ? null : {error: "Invalid query", rateLimit: false},
       });
 
       if (validQuery) {
-        this.getResultsOfSearch(valuesFromURL.query, valuesFromURL.onlyRobo);
+        this.getResultsOfSearch(this.state.query, this.state.onlyRobo);
       }
     }
   }
@@ -91,8 +89,7 @@ class RHomePage extends Component {
       }
 
       case Destinations.FILE_VIEWER: {
-        console.assert(this.state.searchParams !== null);
-        bodyContent = <RFileViewer searchParams={this.state.searchParams} />;
+        bodyContent = <RFileViewer searchParams={this.props.urlParams} />;
         console.log("Navigation= File viewer");
         break;
       }
