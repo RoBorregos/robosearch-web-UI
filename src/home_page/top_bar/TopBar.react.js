@@ -10,7 +10,7 @@ import github_logo from './assets/github_logo.png'
 
 class RTopBar extends Component {
   /**
-   * @param {!{query: !String, onChangeOnlyRoboRepos: !(boolean):undefined}} props
+   * @param {!{defaultQuery: !string, defaultOnlyRoboRepos: !boolean, defaultUseExpSearch: !boolean}} props
    */
   constructor(props) {
     super(props);
@@ -19,9 +19,9 @@ class RTopBar extends Component {
     this.onQueryInSearch = this.onQueryInSearch.bind(this);
 
     this.state = {
-      enableExpSearchSwitch: this.props.onlyRoboRepos, 
-      onlyRoboRepos: this.props.onlyRoboRepos,
-      useExpSearch: this.props.useExpSearch && this.props.onlyRoboRepos,
+      enableExpSearchSwitch: this.props.defaultOnlyRoboRepos, 
+      onlyRoboRepos: this.props.defaultOnlyRoboRepos,
+      useExpSearch: this.props.defaultUseExpSearch && this.props.defaultOnlyRoboRepos,
       // To avoid problems with react knowing if the object window.location changed,
       // init once this data.
       // TODO: Check if there is a safer way to do this.
@@ -67,7 +67,7 @@ class RTopBar extends Component {
         </div>
 
         <div className={"search-switch-div"}>
-          <RSearchBox query={this.props.query} onQuery={this.onQueryInSearch} />
+          <RSearchBox defaultQuery={this.props.defaultQuery} onQuery={this.onQueryInSearch} />
 
           <div className={"switchs-div"}>
             <input 

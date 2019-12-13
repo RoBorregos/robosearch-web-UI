@@ -105,9 +105,9 @@ class RHomePage extends Component {
       <div className={"homepage-div"}>
         <div className={"homepage-top-div"}>
           <RTopBar 
-            query={this.state.query} 
-            onlyRoboRepos={this.state.onlyRobo} 
-            useExpSearch={this.state.expSearch} 
+            defaultQuery={this.state.query} 
+            defaultOnlyRoboRepos={this.state.onlyRobo} 
+            defaultUseExpSearch={this.state.expSearch} 
           />
         </div>
         <div className={"homepage-content-div"}>

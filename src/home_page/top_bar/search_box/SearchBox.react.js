@@ -4,7 +4,7 @@ import './SearchBox.css';
 
 class RSearchBox extends Component {
   /**
-   * @param {!{query: !string, onQuery: (string): undefined}} props 
+   * @param {!{defaultQuery: !string, onQuery: function(string): undefined}} props 
    */
   constructor(props) {
     super(props);
@@ -12,7 +12,7 @@ class RSearchBox extends Component {
     this.handleEnter = this.handleEnter.bind(this);
     this.search = this.search.bind(this);
 
-    this.state = {stringQuery: props.query};
+    this.state = {stringQuery: props.defaultQuery};
   }
 
   handleTyping(event) {
