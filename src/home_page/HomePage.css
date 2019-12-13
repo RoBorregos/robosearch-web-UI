@@ -1,11 +1,15 @@
 .homepage-div {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .homepage-top-div {
-  height: 19%;
+  height: 85px;
 }
 
 .homepage-content-div {
-  height: 81%;
+  /* To make the panel take all the remaining height, put to have double `flex-gow`
+  than the other children (default is 1) */
+  flex-grow: 2;
 }
