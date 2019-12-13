@@ -19,9 +19,9 @@ class RTopBar extends Component {
     this.onQueryInSearch = this.onQueryInSearch.bind(this);
 
     this.state = {
-      enableExpSearchSwitch: this.props.defaultOnlyRoboRepos, 
-      onlyRoboRepos: this.props.defaultOnlyRoboRepos,
-      useExpSearch: this.props.defaultUseExpSearch && this.props.defaultOnlyRoboRepos,
+      enableExpSearchSwitch: props.defaultOnlyRoboRepos, 
+      onlyRoboRepos: props.defaultOnlyRoboRepos,
+      useExpSearch: props.defaultUseExpSearch && props.defaultOnlyRoboRepos,
       // To avoid problems with react knowing if the object window.location changed,
       // init once this data.
       // TODO: Check if there is a safer way to do this.

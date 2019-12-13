@@ -25,8 +25,8 @@ class RHomePage extends Component {
     super(props);
     this.onClickResultToOpenFile = this.onClickResultToOpenFile.bind(this);
 
-    const valuesFromURL = this.getValuesFromURL(this.props.urlParams);
-    const destination = getDestinationFromURLParams(this.props.urlParams);
+    const valuesFromURL = this.getValuesFromURL(props.urlParams);
+    const destination = getDestinationFromURLParams(props.urlParams);
     /** @type {!{query: !string, onlyRobo: !boolean, expSearch: !boolean, queryResults: !Array<!ResultStruct>, errorInRequest: ?{error: ?string, rateLimit: !boolean}, actualDestination: !string}} */
     this.state = {
       ...valuesFromURL,
