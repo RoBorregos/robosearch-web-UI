@@ -13,7 +13,7 @@ import './HomePage.css';
 /**
  * Note: This component does NOT update on props changes. It forever uses the first props
  * passed. At the beginning was because it was meant to be called only once each page load.
- * Now, is also because `RResultViewer`'s default-props.
+ * Now, is also because `RTopBar`'s default-props.
  * 
  * TODO: When the migration of the ResulViewer to its file finishes, change this to make
  * render correctly depend on props. Maybe using `getDerivedStateFromProps()` to make 
