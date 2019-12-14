@@ -20,7 +20,7 @@ const Destinations = {
 function getDestinationFromURLParams(params) {
   const keys = [...params.keys()];
 
-  if (['file_url', 'file', 'repo', 'owner'].every(v => keys.includes(v))) {
+  if (['file', 'repo', 'owner'].every(v => keys.includes(v))) {
     return Destinations.FILE_VIEWER;
   } else if (['q'].every(v => keys.includes(v))) {
     return Destinations.RESULTS;

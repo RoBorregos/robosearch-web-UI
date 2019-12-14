@@ -37,12 +37,11 @@ class RHomePage extends Component {
   }
 
   /**
-   * @param {!string} apiUrlOfFile
    * @param {!string} owner
    * @param {!string} repo
    * @param {!string} file
    */
-  onClickResultToOpenFile(apiUrlOfFile, owner, repo, file) {
+  onClickResultToOpenFile(owner, repo, file) {
     const url = new URL(window.location.origin + window.location.pathname);
 
     url.searchParams.set("q", this.state.query);
@@ -51,7 +50,6 @@ class RHomePage extends Component {
     url.searchParams.set("owner", owner);
     url.searchParams.set("repo", repo);
     url.searchParams.set("file", file);
-    url.searchParams.set("file_url", apiUrlOfFile);
 
     console.log("File at:" + url.toString());
     window.location.href = url.toString();

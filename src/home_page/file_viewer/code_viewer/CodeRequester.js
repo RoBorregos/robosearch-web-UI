@@ -17,27 +17,27 @@
 function validateAndRequestCodeWithParams(searchParams, callback) {
   // TODO: Move this checking to a more general place in HomePage.
   const keys = [...searchParams.keys()];
-  if (!['file_url', 'file', 'repo', 'owner'].every(v => keys.includes(v))) {
+  if (!['file', 'repo', 'owner'].every(v => keys.includes(v))) {
     callback(null);
     return;
   }
 
-  const [fileUrl, file, repo, owner] = [
-    searchParams.get('file_url'),
+  const [file, repo, owner] = [
     searchParams.get('file'),
     searchParams.get('repo'),
     searchParams.get('owner'),
   ];
-  // TODO: Build the api call here.
-  if (!(new RegExp(
-      '^https://api\\.github\\.com.+' + owner + '.+' + repo + '.+' + file,
-      ).test(fileUrl))) {
-    callback(null);
-    return;
-  }
+
+  let fileAPIURL = [
+    "https://api.github.com/repos",
+    owner,
+    repo,
+    "contents",
+    file,
+  ].join("/");
 
   // Make the request and get the branch and file's content.
-  requestResults(fileUrl, result => {
+  requestResults(fileAPIURL, result => {
     // TODO: Return the actual error.
     if (result.error !== null) {
       callback(null);

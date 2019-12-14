@@ -6,7 +6,7 @@ import './ResultDiv.css';
 
 class RResultDiv extends Component {
   /**
-   * @param {!{data: !ResultStruct, onClickToOpen: !function(!string, !string, !string, !string):undefined}} props
+   * @param {!{data: !ResultStruct, onClickToOpen: !function(!string, !string, !string):undefined}} props
    */
 	constructor(props) {
     super(props);
@@ -15,7 +15,6 @@ class RResultDiv extends Component {
 
   onClickToOpen() {
     this.props.onClickToOpen(
-      this.props.data.apiByMasterUrl,
       this.props.data.repositoryOwnerUser,
       this.props.data.repositoryName,
       this.props.data.filePath,
