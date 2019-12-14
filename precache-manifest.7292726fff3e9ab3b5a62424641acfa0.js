@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d8cf1499c34c0dd4c6b7908b6b55617",
+    "revision": "e7dadd47404362200d2c0010cc4b5a56",
     "url": "/RoBoSearch-WebUI/index.html"
   },
   {
-    "revision": "9e7505b0be2ec14b21e8",
-    "url": "/RoBoSearch-WebUI/static/css/main.b6a2aede.chunk.css"
+    "revision": "e6609e761d0f82deafbb",
+    "url": "/RoBoSearch-WebUI/static/css/main.6693ffe5.chunk.css"
   },
   {
-    "revision": "68b00f7671a57c524636",
-    "url": "/RoBoSearch-WebUI/static/js/2.78db4d54.chunk.js"
+    "revision": "001dfda73cb162b31abb",
+    "url": "/RoBoSearch-WebUI/static/js/2.46085af0.chunk.js"
   },
   {
-    "revision": "9e7505b0be2ec14b21e8",
-    "url": "/RoBoSearch-WebUI/static/js/main.d6589842.chunk.js"
+    "revision": "e6609e761d0f82deafbb",
+    "url": "/RoBoSearch-WebUI/static/js/main.9cfa5e2a.chunk.js"
   },
   {
     "revision": "8aefb00f74b749aa6c3b",
