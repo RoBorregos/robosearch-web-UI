@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RCodeViewer from './code_viewer/CodeViewer.react';
+import RCodeViewer from 'home_page/file_viewer/code_viewer/CodeViewer.react.js';
 
 class RFileViewer extends Component {
   /** 

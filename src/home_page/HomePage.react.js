@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import RFileViewer from './file_viewer/FileViewer.react';
-import RResultViewer from './result_viewer/ResultViewer.react.js';
-import RTopBar from './top_bar/TopBar.react';
-import RErrorNotice from './error_notice/ErrorNotice.react.js';
-import {requestResults, checkQuery} from './RequesterHelper.js';
-import {Destinations, getDestinationFromURLParams} from './Redirecter.js';
-import {ResultStruct} from './ResultStruct.js';
+import RFileViewer from 'home_page/file_viewer/FileViewer.react';
+import RResultViewer from 'home_page/result_viewer/ResultViewer.react.js';
+import RTopBar from 'home_page/top_bar/TopBar.react.js';
+import RErrorNotice from 'home_page/error_notice/ErrorNotice.react.js';
+import {requestResults, checkQuery} from 'home_page/RequesterHelper.js';
+import {Destinations, getDestinationFromURLParams} from 'home_page/Redirecter.js';
+import {ResultStruct} from 'home_page/ResultStruct.js';
 
-import './HomePage.css';
+import 'home_page/HomePage.css';
 
 /**
  * Note: This component does NOT update on props changes. It forever uses the first props

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import ResultStruct from '../ResultStruct.js'
-import RResultDiv from './ResultDiv.react.js';
+import ResultStruct from 'home_page/ResultStruct.js'
+import RResultDiv from 'home_page/result_viewer/ResultDiv.react.js';
 
 class RResultViewer extends Component {
   /**

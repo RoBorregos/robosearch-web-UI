@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import RCodeFragment from './code_fragment/CodeFragment.react.js'
+import RCodeFragment from 'home_page/result_viewer/code_fragment/CodeFragment.react.js'
 
-import './ResultDiv.css';
+import 'home_page/result_viewer/ResultDiv.css';
 
 class RResultDiv extends Component {
   /**

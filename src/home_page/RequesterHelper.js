@@ -1,4 +1,4 @@
-import {ResultStruct, GroupMatchesStruct, MatchStruct, SpanStruct} from './ResultStruct.js'
+import {ResultStruct, GroupMatchesStruct, MatchStruct, SpanStruct} from 'home_page/ResultStruct.js'
 
 /**
  * 

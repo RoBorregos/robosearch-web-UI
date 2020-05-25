@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RHomePage from './home_page/HomePage.react.js'
+import RHomePage from 'home_page/HomePage.react.js'
 
 /**
  * TODO: Review if this component is really necessary. Maybe could be the one

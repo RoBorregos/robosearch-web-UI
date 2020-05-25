@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import {GroupMatchesStruct} from '../../ResultStruct.js';
-import {computeSplitedAndHighlitedFragment} from './FragmentFormatter.js';
+import {GroupMatchesStruct} from 'home_page/ResultStruct.js';
+import {computeSplitedAndHighlitedFragment} from 'home_page/result_viewer/code_fragment/FragmentFormatter.js';
 
-import './CodeFragment.css';
+import 'home_page/result_viewer/code_fragment/CodeFragment.css';
 
 class RCodeFragment extends Component {
   /**

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {validateAndRequestCodeWithParams} from './CodeRequester.js';
+import {validateAndRequestCodeWithParams} from 'home_page/file_viewer/code_viewer/CodeRequester.js';
 
 class RCodeViewer extends Component {
   /** 

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import RSearchBox from './search_box/SearchBox.react.js'
+import RSearchBox from 'home_page/top_bar/search_box/SearchBox.react.js'
 
-import './TopBar.css';
+import 'home_page/top_bar/TopBar.css';
 
-import roborregos_logo from './assets/roborregos_logo.png'
-import roborregos_name from './assets/roborregos_name.png'
-import github_logo from './assets/github_logo.png'
+import roborregos_logo from 'home_page/top_bar/assets/roborregos_logo.png'
+import roborregos_name from 'home_page/top_bar/assets/roborregos_name.png'
+import github_logo from 'home_page/top_bar/assets/github_logo.png'
 
 class RTopBar extends Component {
   /**

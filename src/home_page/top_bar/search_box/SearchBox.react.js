@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './SearchBox.css';
+import 'home_page/top_bar/search_box/SearchBox.css';
 
 class RSearchBox extends Component {
   /**

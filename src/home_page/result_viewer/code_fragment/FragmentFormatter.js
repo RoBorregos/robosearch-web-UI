@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {GroupMatchesStruct} from '../../ResultStruct.js';
+import {GroupMatchesStruct} from 'home_page/ResultStruct.js';
 
 /**
  * The algorithm does not use the `text` in matches. 

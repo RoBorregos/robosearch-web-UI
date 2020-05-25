@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './ErrorNotice.css';
+import 'home_page/error_notice/ErrorNotice.css';
 
 class RErrorNotice extends Component {
   /** 
