@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import RSearchBox from 'home_page/top_bar/search_box/SearchBox.react.js'
 
-import 'home_page/top_bar/TopBar.css';
+import style from 'home_page/top_bar/TopBar.module.css';
 
 import roborregos_logo from 'home_page/top_bar/assets/roborregos_logo.png'
 import roborregos_name from 'home_page/top_bar/assets/roborregos_name.png'
@@ -57,19 +57,19 @@ class RTopBar extends Component {
 
   render() {
     return (
-      <div className={"top-bar-div"}>
-        <div className={"name-div"}>
+      <div className={style.parentDiv}>
+        <div className={style.nameDiv}>
           <a href={this.state.pageUrl}>
-            <img src={roborregos_logo} className={"img-logo"} alt="roborregos logo" />
-            <span className={"title-name"}>RoBoSearch</span>
-            <span className={"title-beta"}>beta</span>
+            <img src={roborregos_logo} className={style.imgLogo} alt="roborregos logo" />
+            <span className={style.titleName}>RoBoSearch</span>
+            <span className={style.titleBeta}>beta</span>
           </a>
         </div>
 
-        <div className={"search-switch-div"}>
+        <div className={style.inputsDiv}>
           <RSearchBox defaultQuery={this.props.defaultQuery} onQuery={this.onQueryInSearch} />
 
-          <div className={"switchs-div"}>
+          <div className={style.switchsDiv}>
             <input 
               name="onlyRoboRepos" 
               type="checkbox" 
@@ -88,13 +88,13 @@ class RTopBar extends Component {
           </div>
         </div>
 
-        <div className={"by-div"}>
+        <div className={style.byDiv}>
           <a href="https://roborregos.com"> 
-            <img src={roborregos_name} className={"img-name"} alt="roborregos name" />
+            <img src={roborregos_name} className={style.imgName} alt="roborregos name" />
           </a>
-          <span className={"vertical-line"}>|</span>
+          <span className={style.verticalLine}>|</span>
           <a href="https://github.com/RoBorregos"> 
-            <img src={github_logo} className={"github-img"} alt="roborregos github" />
+            <img src={github_logo} className={style.githubImg} alt="roborregos github" />
           </a>
         </div>
       </div>

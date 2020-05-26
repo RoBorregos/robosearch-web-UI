@@ -1,4 +1,4 @@
-.result-div {
+.parentDiv {
   margin-top: 10px;
   margin-bottom: 10px;
   border-bottom: solid gray 1px;
@@ -6,47 +6,47 @@
   padding: 5px 10px 5px 10px; 
 }
 
-.header-result-div {
+.resultHeader {
   margin-top: 15px;
   text-align: center;
   vertical-align: middle; 
 }
 
-.user-repo-div {
+.userRepo {
   float: left;
   font-weight: 500;
 }
 
-.branch-span {
+.branchSpan {
   font-weight: normal;
 }
 
-.path-file-div {
+.pathFileDiv {
   display: inline;
 }
 
-.path-file-span {
+.pathFileSpan {
   cursor: pointer;
 }
 
-.github-link-div {
+.githubLinkDiv {
   float: right;
 }
 
-.num-appearances-div {
+.numAppearances {
   margin-bottom: 15px;
 }
 
-.fragments-container-div {
+.fragments {
   padding: 5px;
 }
 
-.github-file-link:link, .github-file-link:visited, .github-file-link:hover,
-  .github-file-link:active{
+.githubFileLink:link, .githubFileLink:visited, .githubFileLink:hover,
+  .githubFileLink:active{
   color: unset;
 }
 
-.repository-link:link, .repository-link:visited, .repository-link:hover,
-  .repository-link:active{
+.repositoryLink:link, .repositoryLink:visited, .repositoryLink:hover,
+  .repositoryLink:active{
   color: unset;
 }

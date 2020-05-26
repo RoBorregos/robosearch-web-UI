@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import 'home_page/top_bar/search_box/SearchBox.css';
+import style from 'home_page/top_bar/search_box/SearchBox.module.css';
 
 class RSearchBox extends Component {
   /**
@@ -35,7 +35,7 @@ class RSearchBox extends Component {
 
   render() {
     return (
-      <div className={"search-box-div"}>
+      <div className={style.parentDiv}>
         <input 
           type="text" 
           value={this.state.stringQuery} 
@@ -43,14 +43,14 @@ class RSearchBox extends Component {
           onKeyPress={this.handleEnter} 
           name="inputQuery" 
           autoFocus
-          className={"search-box-input"}
+          className={style.input}
         />
         <input 
           type="button" 
           value="GO" 
           name="submitQuery"
           onClick={this.search}
-          className={"search-box-input"}
+          className={style.input}
         />
       </div>
     );

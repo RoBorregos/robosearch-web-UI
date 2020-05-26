@@ -1,10 +1,10 @@
-.error-notice-div {
+.errorNoticeDiv {
   background-color: #eadabb;
   border: solid black 1px;
   margin-top: 2px;
   text-align: center;
 }
 
-.error-paragraph {
+.errorParagraph {
   margin: 3px;
 }

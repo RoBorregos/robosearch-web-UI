@@ -2,6 +2,8 @@ import React from 'react';
 
 import {GroupMatchesStruct} from 'home_page/ResultStruct.js';
 
+import style from 'home_page/result_viewer/code_fragment/CodeFragment.module.css';
+
 /**
  * The algorithm does not use the `text` in matches. 
  * Also, assumes that would be fragmentSpan != null and fragmentSpan.absolute == true.
@@ -69,7 +71,7 @@ function computeSplitedAndHighlitedFragment(groupMatches) {
         // before the endline.
         if (groupMatches.matches[nextMatch].fragmentSpan.endAbs <= indexNewLine) {
           nextSpans.push(
-            <span key={nextSpans.length.toString()} className={"span-highlight"}>{
+            <span key={nextSpans.length.toString()} className={style.spanHighlight}>{
               groupMatches.fragment.substring(
                 groupMatches.matches[nextMatch].fragmentSpan.startAbs,
                 groupMatches.matches[nextMatch].fragmentSpan.endAbs,
@@ -89,7 +91,7 @@ function computeSplitedAndHighlitedFragment(groupMatches) {
           // Lets grab until the end of the line and not remove the match, to leave it
           // to complete its "highlighting" in the next line(s).
           nextSpans.push(
-            <span key={nextSpans.length.toString()} className={"span-highlight"}>{
+            <span key={nextSpans.length.toString()} className={style.spanHighlight}>{
               groupMatches.fragment.substring(
                 groupMatches.matches[nextMatch].fragmentSpan.startAbs,
                 indexNewLine,
@@ -116,7 +118,7 @@ function computeSplitedAndHighlitedFragment(groupMatches) {
       }
     }
     paragraphs.push(
-      <p key={paragraphs.length.toString()} className={"code-line"}>{nextSpans}</p>
+      <p key={paragraphs.length.toString()} className={style.codeLine}>{nextSpans}</p>
     );
 
     lastNewLine = indexNewLine;

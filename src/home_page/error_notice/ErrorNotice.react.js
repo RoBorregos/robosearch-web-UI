@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import 'home_page/error_notice/ErrorNotice.css';
+import style from 'home_page/error_notice/ErrorNotice.module.css';
 
 class RErrorNotice extends Component {
   /** 
@@ -19,11 +19,11 @@ class RErrorNotice extends Component {
       "Limit of requests exceeded, try again in a minute." :
       this.props.error;
     return (
-      <div className={"error-notice-div"}>
-        <p className={"error-paragraph"}>
+      <div className={style.errorNoticeDiv}>
+        <p className={style.errorParagraph}>
           There has been an error while making the request. Try again.
         </p>
-        <p className={"error-paragraph"}><code>{errorMessage}</code></p>
+        <p className={style.errorParagraph}><code>{errorMessage}</code></p>
       </div>
     );
   }

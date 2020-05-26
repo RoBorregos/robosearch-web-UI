@@ -1,4 +1,4 @@
-.top-bar-div {
+.parentDiv {
   padding: 15px 20px 20px 20px;
   border-bottom: 2px solid gray;
   box-sizing: border-box;
@@ -6,54 +6,54 @@
   height: 100%;
 }
 
-.name-div {
+.nameDiv {
   display: inline-block;
   margin-right: 5px;
 }
 
-.img-logo {
+.imgLogo {
   height: 50px;
 }
 
-.title-name {
+.titleName {
   font-weight: bold;
   font-size: 1.8em;
   margin: 0px 1px 0px 6px;
 }
 
-.title-beta {
+.titleBeta {
   font-size: 0.9em;
 }
 
-.name-div a:link, .name-div a:visited, .name-div a:hover,
-  .name-div a:active{
+.nameDiv a:link, .nameDiv a:visited, .nameDiv a:hover,
+  .nameDiv a:active{
   color: unset;
   text-decoration: none;
 }
 
-.search-switch-div {
+.inputsDiv {
   display: inline-block;
 }
 
-.switchs-div {
+.switchsDiv {
   display: inline-block;
 }
 
-.by-div {
+.byDiv {
   display: inline-block;
   float: right;
   margin-top: 10px;
 }
 
-.vertical-line {
+.verticalLine {
   font-size: 45px;
   font-weight: 100;
 }
 
-.img-name {
+.imgName {
   height: 30px;
 }
 
-.github-img {
+.githubImg {
   height: 30px;
 }

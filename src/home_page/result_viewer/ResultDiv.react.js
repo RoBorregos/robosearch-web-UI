@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import RCodeFragment from 'home_page/result_viewer/code_fragment/CodeFragment.react.js'
 
-import 'home_page/result_viewer/ResultDiv.css';
+import style from 'home_page/result_viewer/ResultDiv.module.css';
 
 class RResultDiv extends Component {
   /**
@@ -35,30 +35,30 @@ class RResultDiv extends Component {
     });
 
 		return (
-			<div className="result-div">
-        <div className="header-result-div">
-          <div className="user-repo-div">
-            <a className="repository-link" href={data.repositoryUrl}>
+			<div className={style.parentDiv}>
+        <div className={style.resultHeader}>
+          <div className={style.userRepo}>
+            <a className={style.repositoryLink} href={data.repositoryUrl}>
               {data.repositoryOwnerUser}/{data.repositoryName} 
             </a>
-            <span className="branch-span"> (master-{data.commit.substr(0, 7)})</span>
+            <span className={style.branchSpan}> (master-{data.commit.substr(0, 7)})</span>
           </div>
-          <div className="path-file-div">
-            <span className="path-file-span" onClick={this.onClickToOpen}>
+          <div className={style.pathFileDiv}>
+            <span className={style.pathFileSpan} onClick={this.onClickToOpen}>
               {data.filePath}
             </span>
             {privateSpan !== null ? <span>&nbsp;[{privateSpan}]</span> : <span />}
           </div>
-          <div className="github-link-div">
-            <a className="github-file-link" href={data.fileByCommitUrl}>
+          <div className={style.githubLinkDiv}>
+            <a className={style.githubFileLink} href={data.fileByCommitUrl}>
               GITHUB
             </a>
           </div>
         </div>
 
-        <div className="num-appearances-div">{data.totalAppearances} appearances</div>
+        <div className={style.numAppearances}>{data.totalAppearances} appearances</div>
 
-        <div className="fragments-container-div">
+        <div className={style.fragments}>
           {codeFragments}
         </div>
 			</div>

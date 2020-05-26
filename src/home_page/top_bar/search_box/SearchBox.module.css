@@ -1,7 +1,7 @@
-.search-box-div {
+.parentDiv {
   display: inline-block;
 }
 
-.search-box-input {
+.input {
   font-size: medium;
 }

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {GroupMatchesStruct} from 'home_page/ResultStruct.js';
 import {computeSplitedAndHighlitedFragment} from 'home_page/result_viewer/code_fragment/FragmentFormatter.js';
 
-import 'home_page/result_viewer/code_fragment/CodeFragment.css';
+import style from 'home_page/result_viewer/code_fragment/CodeFragment.module.css';
 
 class RCodeFragment extends Component {
   /**
@@ -32,12 +32,12 @@ class RCodeFragment extends Component {
     const divCodeLines = computeSplitedAndHighlitedFragment(dataClone);
 
 		return (
-			<div className={"fragment-div"}>
-        <div className={"code-lines-div"} onClick={this.onClickToOpen}>
+			<div className={style.parentDiv}>
+        <div className={style.codeLinesDiv} onClick={this.onClickToOpen}>
           {divCodeLines}
         </div>
 
-        <div className={"footer-div"}>
+        <div className={style.footerDiv}>
           {data.fragment.split("\n").length} lines - {data.matches.length} appearances
         </div>
 			</div>

@@ -8,7 +8,7 @@ import {requestResults, checkQuery} from 'home_page/RequesterHelper.js';
 import {Destinations, getDestinationFromURLParams} from 'home_page/Redirecter.js';
 import {ResultStruct} from 'home_page/ResultStruct.js';
 
-import 'home_page/HomePage.css';
+import style from 'home_page/HomePage.module.css';
 
 /**
  * Note: This component does NOT update on props changes. It forever uses the first props
@@ -100,15 +100,15 @@ class RHomePage extends Component {
     }
 
     return (
-      <div className={"homepage-div"}>
-        <div className={"homepage-top-div"}>
+      <div className={style.parentDiv}>
+        <div className={style.topDiv}>
           <RTopBar 
             defaultQuery={this.state.query} 
             defaultOnlyRoboRepos={this.state.onlyRobo} 
             defaultUseExpSearch={this.state.expSearch} 
           />
         </div>
-        <div className={"homepage-content-div"}>
+        <div className={style.contentDiv}>
           {bodyContent}
         </div>
       </div>
