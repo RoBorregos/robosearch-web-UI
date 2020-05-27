@@ -58,8 +58,9 @@ function computeSplitedAndHighlitedFragment(groupMatches) {
     while (true) {
       if (nextMatch < groupMatches.matches.length &&
         groupMatches.matches[nextMatch].fragmentSpan.startAbs < indexNewLine) {
+        // It's a not-highlighted text.
         nextSpans.push(
-          <span key={nextSpans.length.toString()} className={"span-text"}>{
+          <span key={nextSpans.length.toString()}>{
             groupMatches.fragment.substring(
               lastPosInLine + 1, 
               groupMatches.matches[nextMatch].fragmentSpan.startAbs,
@@ -105,9 +106,10 @@ function computeSplitedAndHighlitedFragment(groupMatches) {
         }
       } else {
         // Let's take all the line exactly like that and keep the match for the next time.
+        // It's a not-highlighted text.
         const content = groupMatches.fragment.substring(lastPosInLine + 1, indexNewLine);
         nextSpans.push(
-          <span key={nextSpans.length.toString()} className={"span-text"}>{
+          <span key={nextSpans.length.toString()}>{
             // If the line is empty, lets put something to hold the space.
             // Also, use space instead of "&nbsp;" because we use "pre"-like style.
             content.length === 0 && nextSpans.length === 0 ? " " : content
