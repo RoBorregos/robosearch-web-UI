@@ -1,0 +1,26 @@
+.parentDiv {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.leftPanel {
+  height: 100%;
+  width: 20%;
+}
+
+.centralParentPanel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+}
+
+.centralTopPanel {
+  overflow: auto;
+  height: 80%;
+}
+
+.centralBottomPanel {
+  height: 20%;
+}
