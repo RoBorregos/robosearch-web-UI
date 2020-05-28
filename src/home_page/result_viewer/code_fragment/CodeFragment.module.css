@@ -17,6 +17,7 @@
   outline: black solid 1px;
   border: gray solid 1px;
   border-left: gray solid 15px;
+  overflow-x: auto;
 }
 
 .footerDiv {
