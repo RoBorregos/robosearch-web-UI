@@ -1,0 +1,5 @@
+.CodeMirror {
+  /* To make the height take all the available height
+  if needed */
+  height: auto;
+}
