@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import ResultStruct from 'home_page/ResultStruct.js'
+import ResultStruct from 'home_page/ResultStruct.js';
 import RResultDiv from 'home_page/result_viewer/ResultDiv.react.js';
+
+import style from 'home_page/result_viewer/ResultViewer.module.css';
 
 class RResultViewer extends Component {
   /**
@@ -20,7 +22,11 @@ class RResultViewer extends Component {
         />;
     });
 
-		return <div> {listOfResultDivs}</div>;
+		return (
+      <div className={style.parentDiv}>
+        {listOfResultDivs}
+      </div>
+    );
 	}
 }
 

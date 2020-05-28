@@ -12,5 +12,8 @@
   /* To make the panel take all the remaining height, put to have double `flex-gow`
   than the other children (default is 1) */
   flex-grow: 2;
-  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
 }
