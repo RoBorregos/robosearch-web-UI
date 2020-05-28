@@ -59,7 +59,7 @@ class RTopBar extends Component {
     return (
       <div className={style.parentDiv}>
         <div className={style.nameDiv}>
-          <a href={this.state.pageUrl}>
+          <a href={this.state.pageUrl} className={style.nameUrl}>
             <img src={roborregos_logo} className={style.imgLogo} alt="roborregos logo" />
             <span className={style.titleName}>RoBoSearch</span>
             <span className={style.titleBeta}>beta</span>

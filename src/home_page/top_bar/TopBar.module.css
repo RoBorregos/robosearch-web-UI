@@ -1,14 +1,29 @@
+/**
+ * Cellphone
+ */
+@media only screen and (max-width: 700px), (max-height: 400px) {
+.titleName, .titleBeta {
+  display: none;
+}
+} /* Cellphone */
+
 .parentDiv {
   padding: 15px 20px 20px 20px;
   border-bottom: 2px solid gray;
-  box-sizing: border-box;
   background-color: #dce0e0;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .nameDiv {
   display: inline-block;
   margin-right: 5px;
+}
+
+.nameUrl {
+  display: flex;
+  align-items: baseline;
 }
 
 .imgLogo {
@@ -40,9 +55,11 @@
 }
 
 .byDiv {
-  display: inline-block;
-  float: right;
+  display: none;
   margin-top: 10px;
+  flex-grow: 2;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 
 .verticalLine {
@@ -57,3 +74,12 @@
 .githubImg {
   height: 30px;
 }
+
+/**
+ * Computer
+ */
+@media screen and (min-width: 900px) {
+.byDiv {
+  display: inline-flex;
+}
+} /* Computer */
