@@ -23,7 +23,7 @@ class RAllSecrets extends Component {
 
   componentDidMount() {
     fetch(
-      `http://localhost:8081/api/class/get-all-code/`,
+      `https://secret-depths-42003.herokuapp.com/api/class/get-all-code/`,
     ).then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);

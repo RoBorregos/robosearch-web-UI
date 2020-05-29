@@ -24,7 +24,7 @@ class RSecretView extends Component {
     }
 
     fetch(
-      `http://localhost:8081/api/class/users/check-admin/${this.state.idUsuario}`,
+      `https://secret-depths-42003.herokuapp.com/api/class/users/check-admin/${this.state.idUsuario}`,
     ).then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
