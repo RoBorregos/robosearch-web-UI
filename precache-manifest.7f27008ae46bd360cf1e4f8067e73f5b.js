@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "109e977f410aaa84456463e9addfcfc3",
+    "revision": "f0cd2a58dd07575cd3605ebbd1cc5e16",
     "url": "/RoBoSearch-WebUI/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/RoBoSearch-WebUI/static/css/2.c46397a6.chunk.css"
   },
   {
-    "revision": "ad473aa81ff149304274",
-    "url": "/RoBoSearch-WebUI/static/css/main.d8581122.chunk.css"
+    "revision": "190f95d71a6df18e90fa",
+    "url": "/RoBoSearch-WebUI/static/css/main.acb93dae.chunk.css"
   },
   {
     "revision": "f2acc8a211ea9c419b0c",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad473aa81ff149304274",
+    "revision": "190f95d71a6df18e90fa",
     "url": "/RoBoSearch-WebUI/static/js/main.6c3ea2c6.chunk.js"
   },
   {

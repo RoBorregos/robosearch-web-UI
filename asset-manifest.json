@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/RoBoSearch-WebUI/static/css/main.d8581122.chunk.css",
+    "main.css": "/RoBoSearch-WebUI/static/css/main.acb93dae.chunk.css",
     "main.js": "/RoBoSearch-WebUI/static/js/main.6c3ea2c6.chunk.js",
     "main.js.map": "/RoBoSearch-WebUI/static/js/main.6c3ea2c6.chunk.js.map",
     "runtime-main.js": "/RoBoSearch-WebUI/static/js/runtime-main.87fb519a.js",
@@ -9,10 +9,10 @@
     "static/js/2.f1877c4c.chunk.js": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js",
     "static/js/2.f1877c4c.chunk.js.map": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js.map",
     "index.html": "/RoBoSearch-WebUI/index.html",
-    "precache-manifest.d3b72d309ce5250eccdc16c364146f3f.js": "/RoBoSearch-WebUI/precache-manifest.d3b72d309ce5250eccdc16c364146f3f.js",
+    "precache-manifest.7f27008ae46bd360cf1e4f8067e73f5b.js": "/RoBoSearch-WebUI/precache-manifest.7f27008ae46bd360cf1e4f8067e73f5b.js",
     "service-worker.js": "/RoBoSearch-WebUI/service-worker.js",
     "static/css/2.c46397a6.chunk.css.map": "/RoBoSearch-WebUI/static/css/2.c46397a6.chunk.css.map",
-    "static/css/main.d8581122.chunk.css.map": "/RoBoSearch-WebUI/static/css/main.d8581122.chunk.css.map",
+    "static/css/main.acb93dae.chunk.css.map": "/RoBoSearch-WebUI/static/css/main.acb93dae.chunk.css.map",
     "static/js/2.f1877c4c.chunk.js.LICENSE.txt": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js.LICENSE.txt",
     "static/media/roborregos_logo.png": "/RoBoSearch-WebUI/static/media/roborregos_logo.594a0cab.png",
     "static/media/roborregos_name.png": "/RoBoSearch-WebUI/static/media/roborregos_name.ffecce74.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.87fb519a.js",
     "static/css/2.c46397a6.chunk.css",
     "static/js/2.f1877c4c.chunk.js",
-    "static/css/main.d8581122.chunk.css",
+    "static/css/main.acb93dae.chunk.css",
     "static/js/main.6c3ea2c6.chunk.js"
   ]
 }
