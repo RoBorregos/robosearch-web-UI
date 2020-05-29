@@ -52,6 +52,7 @@
 
 .switchsDiv {
   display: inline-block;
+  margin: 0 2px;
 }
 
 .byDiv {

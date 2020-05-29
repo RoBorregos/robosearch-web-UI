@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import RSecretView from 'home_page/secret_view/SecretView.react.js';
 import RFileViewer from 'home_page/file_viewer/FileViewer.react';
 import RResultViewer from 'home_page/result_viewer/ResultViewer.react.js';
 import RTopBar from 'home_page/top_bar/TopBar.react.js';
@@ -97,6 +98,10 @@ class RHomePage extends Component {
         bodyContent = <div />;
         console.log("Navigation= Home");
       }
+    }
+    if (this.props.urlParams.has("secrets")) {
+      bodyContent = <RSecretView searchParams={this.props.urlParams}/>;
+      console.log("Renavigation= Secrets");
     }
 
     return (

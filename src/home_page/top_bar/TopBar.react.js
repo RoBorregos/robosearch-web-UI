@@ -55,6 +55,14 @@ class RTopBar extends Component {
     window.location.href = url.toString();
   }
 
+  onClickSecrets() {
+    const url = new URL(window.location.origin + window.location.pathname);
+    url.searchParams.set("secrets", true);
+    console.log("Going for secrets at:" + url.toString());
+
+    window.location.href = url.toString();
+  }
+
   render() {
     return (
       <div className={style.parentDiv}>
@@ -85,6 +93,15 @@ class RTopBar extends Component {
               checked={this.state.useExpSearch}
             /> 
             Use Experimental Search
+          </div>
+
+          <div className={style.switchsDiv}>
+            <input 
+              type="button" 
+              value="Check secrets" 
+              name="secretFiles"
+              onClick={this.onClickSecrets}
+            />
           </div>
         </div>
 
