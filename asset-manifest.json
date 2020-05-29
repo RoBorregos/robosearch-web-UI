@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/RoBoSearch-WebUI/static/css/main.6693ffe5.chunk.css",
-    "main.js": "/RoBoSearch-WebUI/static/js/main.9cfa5e2a.chunk.js",
-    "main.js.map": "/RoBoSearch-WebUI/static/js/main.9cfa5e2a.chunk.js.map",
-    "runtime-main.js": "/RoBoSearch-WebUI/static/js/runtime-main.f1ae0deb.js",
-    "runtime-main.js.map": "/RoBoSearch-WebUI/static/js/runtime-main.f1ae0deb.js.map",
-    "static/js/2.46085af0.chunk.js": "/RoBoSearch-WebUI/static/js/2.46085af0.chunk.js",
-    "static/js/2.46085af0.chunk.js.map": "/RoBoSearch-WebUI/static/js/2.46085af0.chunk.js.map",
+    "main.css": "/RoBoSearch-WebUI/static/css/main.d8581122.chunk.css",
+    "main.js": "/RoBoSearch-WebUI/static/js/main.6c3ea2c6.chunk.js",
+    "main.js.map": "/RoBoSearch-WebUI/static/js/main.6c3ea2c6.chunk.js.map",
+    "runtime-main.js": "/RoBoSearch-WebUI/static/js/runtime-main.87fb519a.js",
+    "runtime-main.js.map": "/RoBoSearch-WebUI/static/js/runtime-main.87fb519a.js.map",
+    "static/css/2.c46397a6.chunk.css": "/RoBoSearch-WebUI/static/css/2.c46397a6.chunk.css",
+    "static/js/2.f1877c4c.chunk.js": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js",
+    "static/js/2.f1877c4c.chunk.js.map": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js.map",
     "index.html": "/RoBoSearch-WebUI/index.html",
-    "precache-manifest.7292726fff3e9ab3b5a62424641acfa0.js": "/RoBoSearch-WebUI/precache-manifest.7292726fff3e9ab3b5a62424641acfa0.js",
+    "precache-manifest.d3b72d309ce5250eccdc16c364146f3f.js": "/RoBoSearch-WebUI/precache-manifest.d3b72d309ce5250eccdc16c364146f3f.js",
     "service-worker.js": "/RoBoSearch-WebUI/service-worker.js",
-    "static/css/main.6693ffe5.chunk.css.map": "/RoBoSearch-WebUI/static/css/main.6693ffe5.chunk.css.map",
+    "static/css/2.c46397a6.chunk.css.map": "/RoBoSearch-WebUI/static/css/2.c46397a6.chunk.css.map",
+    "static/css/main.d8581122.chunk.css.map": "/RoBoSearch-WebUI/static/css/main.d8581122.chunk.css.map",
+    "static/js/2.f1877c4c.chunk.js.LICENSE.txt": "/RoBoSearch-WebUI/static/js/2.f1877c4c.chunk.js.LICENSE.txt",
     "static/media/roborregos_logo.png": "/RoBoSearch-WebUI/static/media/roborregos_logo.594a0cab.png",
     "static/media/roborregos_name.png": "/RoBoSearch-WebUI/static/media/roborregos_name.ffecce74.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f1ae0deb.js",
-    "static/js/2.46085af0.chunk.js",
-    "static/css/main.6693ffe5.chunk.css",
-    "static/js/main.9cfa5e2a.chunk.js"
+    "static/js/runtime-main.87fb519a.js",
+    "static/css/2.c46397a6.chunk.css",
+    "static/js/2.f1877c4c.chunk.js",
+    "static/css/main.d8581122.chunk.css",
+    "static/js/main.6c3ea2c6.chunk.js"
   ]
 }
