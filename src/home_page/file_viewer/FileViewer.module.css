@@ -5,18 +5,20 @@
 }
 
 .leftPanel {
+  border: 1px solid gray;
   height: 100%;
   width: 20%;
-}
+  display: none;
+} 
 
 .centralParentPanel {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
 }
 
 .centralTopPanel {
+  border: 1px solid gray;
   overflow: auto;
   height: 80%;
 }
@@ -24,3 +26,16 @@
 .centralBottomPanel {
   height: 20%;
 }
+
+/**
+ * Computer
+ */
+@media screen and (min-width: 900px) {
+.leftPanel {
+  display: unset;
+}
+
+.centralParentPanel {
+  width: 80%;
+}
+} /* Computer */
